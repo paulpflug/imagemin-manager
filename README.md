@@ -25,14 +25,14 @@ module.exports = {
 ```
 ```sh
 # call in terminal:
-imagemin
+imagemin-manager
 ```
 ```js
 // or use a task in your package.json
 ...
   "scripts": {
     ...
-    "deploy:imagemin": "imagemin"
+    "deploy:imagemin": "imagemin-manager"
     ...
   }
 ...

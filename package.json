@@ -13,7 +13,7 @@
     "url": "git://github.com/paulpflug/imagemin-manager"
   },
   "bin": {
-    "imagemin": "./cli.js"
+    "imagemin-manager": "./cli.js"
   },
   "engines": {
     "node": "*"
