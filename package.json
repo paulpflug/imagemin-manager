@@ -1,0 +1,46 @@
+{
+  "name": "imagemin-manager",
+  "description": "declarative use of imagemin \\o/",
+  "version": "0.0.0",
+  "homepage": "https://github.com/paulpflug/",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulpflug/imagemin-manager"
+  },
+  "bin": {
+    "imagemin": "./cli.js"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "imagemin.js",
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "fs-extra": "^3.0.1",
+    "imagemin": "^5.3.1"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.0.0-beta3",
+    "imagemin-guetzli": "^1.0.0"
+  },
+  "keywords": [
+    "imagemin",
+    "manager"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "coffee --bare --no-header --compile --output ./ src/*.coffee",
+    "dev": "npm run build && node ./cli.js",
+    "test": "",
+    "preversion": "npm run test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish"
+  }
+}
