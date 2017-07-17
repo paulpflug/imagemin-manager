@@ -2,7 +2,10 @@
 
 declarative use of imagemin \o/.
 
-Will skip files, when the source is older than the target.
+Features:
+  - image processing powered by [imagemin](https://github.com/imagemin/imagemin)
+  - image preprocessing powered by [jimp](https://github.com/oliver-moran/jimp)
+  - will skip files, when the source and the config file are older then the target
 
 ### Install
 
@@ -20,6 +23,11 @@ module.exports = {
   process: {
     ico: "copy", // will match files with /.ico$/
     jpg: require("imagemin-guetzli")({quality: 87})
+  }
+  preprocess: {// see jimp for available commands
+    jpg: [
+      ["resize","AUTO",400]
+    ]
   }
 }
 ```
